@@ -1,0 +1,1390 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-color: #2a7a3b;
+    --primary-dark: #1e5a2b;
+    --secondary-color: #ffb347;
+    --accent-color: #e67e22;
+    --text-color: #333;
+    --text-light: #666;
+    --bg-light: #f9f9f9;
+    --white: #ffffff;
+    --shadow: 0 2px 10px rgba(0,0,0,0.1);
+    --whatsapp: #25D366;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: var(--text-color);
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* HEADER */
+header {
+    background: var(--white);
+    box-shadow: var(--shadow);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+}
+
+.logo h1 {
+    font-size: 1.5rem;
+    color: var(--primary-color);
+}
+
+.logo span {
+    color: var(--secondary-color);
+    font-weight: 300;
+}
+
+.nav-menu {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+}
+
+.nav-menu a {
+    text-decoration: none;
+    color: var(--text-color);
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.nav-menu a:hover {
+    color: var(--primary-color);
+}
+
+.cart-icon {
+    position: relative;
+    cursor: pointer;
+    font-size: 1.3rem;
+    color: var(--primary-color);
+}
+
+.cart-count {
+    position: absolute;
+    top: -8px;
+    right: -8px;
+    background: var(--secondary-color);
+    color: var(--white);
+    font-size: 0.7rem;
+    padding: 2px 6px;
+    border-radius: 50%;
+}
+
+.menu-toggle {
+    display: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+/* HERO SECTION */
+.hero {
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('img/logo.png');
+    background-size: cover;
+    background-position: center;
+    color: var(--white);
+    text-align: center;
+    padding: 100px 0;
+}
+
+.hero-content h1 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+}
+
+.hero-content h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: var(--secondary-color);
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+    max-width: 800px;
+    margin: 0 auto 30px;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 12px 30px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: 600;
+    transition: all 0.3s;
+    cursor: pointer;
+    border: none;
+}
+
+.btn-primary {
+    background: var(--primary-color);
+    color: var(--white);
+}
+
+.btn-primary:hover {
+    background: var(--primary-dark);
+    transform: translateY(-2px);
+}
+
+.btn-whatsapp {
+    background: var(--whatsapp);
+    color: var(--white);
+}
+
+.btn-whatsapp:hover {
+    background: #128C7E;
+    transform: translateY(-2px);
+}
+
+.btn-secondary {
+    background: var(--text-light);
+    color: var(--white);
+}
+
+.btn-large {
+    padding: 15px 40px;
+    font-size: 1.1rem;
+}
+
+.badges {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.badge {
+    background: rgba(255,255,255,0.2);
+    padding: 8px 15px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+}
+
+.badge i {
+    margin-right: 5px;
+    color: var(--secondary-color);
+}
+
+/* DESCRIPTION */
+.description {
+    padding: 60px 0;
+    background: var(--bg-light);
+}
+
+.description-text {
+    font-size: 1.1rem;
+    text-align: center;
+    max-width: 900px;
+    margin: 0 auto 20px;
+    color: var(--text-light);
+}
+
+/* BENEFITS */
+.benefits {
+    padding: 60px 0;
+}
+
+.benefits-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+}
+
+.benefit-card {
+    text-align: center;
+    padding: 30px;
+    background: var(--white);
+    border-radius: 10px;
+    box-shadow: var(--shadow);
+    transition: transform 0.3s;
+}
+
+.benefit-card:hover {
+    transform: translateY(-5px);
+}
+
+.benefit-card i {
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    margin-bottom: 15px;
+}
+
+.benefit-card h3 {
+    margin-bottom: 10px;
+    color: var(--primary-dark);
+}
+
+/* PRODUCTS SECTION */
+.products {
+    padding: 80px 0;
+    background: var(--bg-light);
+}
+
+.section-title {
+    text-align: center;
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    margin-bottom: 10px;
+}
+
+.section-subtitle {
+    text-align: center;
+    color: var(--text-light);
+    margin-bottom: 50px;
+}
+
+.products-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: 30px;
+}
+
+.product-card {
+    background: var(--white);
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    transition: transform 0.3s;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+}
+
+.product-image {
+    height: 200px;
+    overflow: hidden;
+}
+
+.product-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.product-info {
+    padding: 20px;
+}
+
+.product-info h3 {
+    font-size: 1.3rem;
+    color: var(--primary-color);
+    margin-bottom: 5px;
+}
+
+.product-tagline {
+    color: var(--secondary-color);
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.product-description {
+    color: var(--text-light);
+    margin-bottom: 15px;
+    font-size: 0.95rem;
+}
+
+.product-benefits {
+    list-style: none;
+    margin-bottom: 15px;
+}
+
+.product-benefits li {
+    margin-bottom: 5px;
+    font-size: 0.9rem;
+}
+
+.product-benefits i {
+    color: var(--primary-color);
+    margin-right: 5px;
+}
+
+.product-prices {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    margin-bottom: 15px;
+    padding: 10px 0;
+    border-top: 1px solid #eee;
+    border-bottom: 1px solid #eee;
+}
+
+.price-item {
+    display: flex;
+    justify-content: space-between;
+    font-weight: 500;
+}
+
+.price-item strong {
+    color: var(--primary-color);
+}
+
+.product-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.product-price {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: var(--primary-color);
+}
+
+.btn-add {
+    background: var(--primary-color);
+    color: var(--white);
+    padding: 8px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background 0.3s;
+}
+
+.btn-add:hover {
+    background: var(--primary-dark);
+}
+
+/* PROMO SECTIONS */
+.promo-section,
+.kit-section,
+.kit-transform-section {
+    padding: 60px 0;
+}
+
+.promo-card,
+.kit-card,
+.kit-transform-card {
+    background: linear-gradient(135deg, var(--primary-color), var(--primary-dark));
+    color: var(--white);
+    padding: 50px;
+    border-radius: 15px;
+    text-align: center;
+}
+
+.promo-card h2,
+.kit-card h2,
+.kit-transform-card h2 {
+    font-size: 2rem;
+    margin-bottom: 15px;
+}
+
+.promo-products {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+.promo-products span {
+    background: rgba(255,255,255,0.2);
+    padding: 5px 15px;
+    border-radius: 20px;
+}
+
+.kit-products {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    margin: 30px 0;
+}
+
+.kit-product {
+    background: rgba(255,255,255,0.1);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.kit-product h4 {
+    color: var(--secondary-color);
+    margin-bottom: 10px;
+}
+
+.kit-price {
+    margin: 20px 0;
+}
+
+.old-price {
+    text-decoration: line-through;
+    opacity: 0.8;
+    margin-right: 15px;
+}
+
+.new-price {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--secondary-color);
+}
+
+/* TESTIMONIAL */
+.testimonial {
+    padding: 60px 0;
+    background: var(--bg-light);
+}
+
+.testimonial-card {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 30px;
+    background: var(--white);
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: var(--shadow);
+}
+
+.testimonial-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.testimonial-content {
+    padding: 30px;
+}
+
+.testimonial-content h3 {
+    color: var(--primary-color);
+    margin-bottom: 15px;
+}
+
+.testimonial-author {
+    margin-top: 20px;
+    font-style: italic;
+    color: var(--secondary-color);
+}
+
+/* REPLACE SECTION */
+.replace-section {
+    padding: 60px 0;
+}
+
+.replace-card {
+    background: var(--bg-light);
+    padding: 40px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.replace-comparison {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    margin: 20px 0;
+}
+
+.replace-arrow {
+    font-size: 2rem;
+    color: var(--primary-color);
+}
+
+/* MENS HEALTH */
+.mens-health,
+.prostate-health {
+    padding: 60px 0;
+}
+
+.mens-card {
+    background: linear-gradient(135deg, #2c3e50, #3498db);
+    color: var(--white);
+    padding: 40px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.mens-card h2 {
+    margin-bottom: 10px;
+}
+
+.mens-card h3 {
+    color: var(--secondary-color);
+    margin-bottom: 20px;
+}
+
+.mens-benefits {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+.mens-quote {
+    font-size: 1.2rem;
+    font-style: italic;
+    margin-top: 20px;
+}
+
+.prostate-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.prostate-card {
+    background: var(--bg-light);
+    padding: 30px;
+    border-radius: 10px;
+}
+
+.prostate-card h3 {
+    color: var(--primary-color);
+    margin-bottom: 15px;
+}
+
+.prostate-card ul {
+    list-style: none;
+    margin-bottom: 15px;
+}
+
+.prostate-card li {
+    margin-bottom: 8px;
+}
+
+.product-tag {
+    color: var(--text-light);
+    font-size: 0.9rem;
+    margin-top: 10px;
+}
+
+/* VITA XTRA */
+.vita-xtra {
+    padding: 60px 0;
+    background: var(--bg-light);
+}
+
+.vita-card {
+    background: var(--white);
+    padding: 40px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: var(--shadow);
+}
+
+.vita-card h2 {
+    color: var(--primary-color);
+    font-size: 2rem;
+}
+
+.vita-card h3 {
+    color: var(--secondary-color);
+    margin-bottom: 20px;
+}
+
+.vita-benefits {
+    max-width: 500px;
+    margin: 0 auto 20px;
+    text-align: left;
+}
+
+.vita-benefits p {
+    margin-bottom: 10px;
+}
+
+.vita-prices {
+    margin: 20px 0;
+    font-size: 1.1rem;
+}
+
+/* DETOX */
+.detox {
+    padding: 60px 0;
+}
+
+.detox h2 {
+    text-align: center;
+    color: var(--primary-color);
+    margin-bottom: 40px;
+}
+
+.detox-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+}
+
+.detox-item {
+    background: var(--white);
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: var(--shadow);
+}
+
+.detox-item h3 {
+    color: var(--primary-color);
+    margin-bottom: 10px;
+}
+
+/* PROBIX FEATURED */
+.probix-featured {
+    padding: 60px 0;
+    background: linear-gradient(135deg, #f39c12, #e67e22);
+    color: var(--white);
+}
+
+.probix-card {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.probix-card h2 {
+    font-size: 2rem;
+    margin-bottom: 15px;
+}
+
+.probix-card ul {
+    list-style: none;
+    margin: 20px 0;
+}
+
+.probix-card li {
+    margin-bottom: 10px;
+    font-size: 1.1rem;
+}
+
+/* HOW TO BUY */
+.how-to-buy {
+    padding: 80px 0;
+    background: var(--bg-light);
+}
+
+.steps {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    margin: 40px 0;
+}
+
+.step {
+    text-align: center;
+    padding: 30px;
+    background: var(--white);
+    border-radius: 10px;
+    box-shadow: var(--shadow);
+}
+
+.step-number {
+    width: 50px;
+    height: 50px;
+    background: var(--primary-color);
+    color: var(--white);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin: 0 auto 20px;
+}
+
+/* SHIPPING */
+.shipping {
+    padding: 60px 0;
+}
+
+.shipping-info {
+    text-align: center;
+    padding: 40px;
+    background: var(--bg-light);
+    border-radius: 10px;
+}
+
+.shipping-info i {
+    font-size: 4rem;
+    color: var(--primary-color);
+    margin-bottom: 20px;
+}
+
+.shipping-note {
+    margin-top: 20px;
+    color: var(--text-light);
+    font-size: 0.9rem;
+}
+
+/* CONTACT */
+.contact {
+    padding: 60px 0;
+    background: var(--bg-light);
+}
+
+.contact-content {
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.contact-info p {
+    margin-bottom: 20px;
+}
+
+.contact-buttons {
+    margin: 30px 0;
+}
+
+.disclaimer {
+    font-size: 0.8rem;
+    color: var(--text-light);
+    margin-top: 20px;
+}
+
+/* FRANCHISE */
+.franchise {
+    padding: 60px 0;
+    background: linear-gradient(135deg, #1a1a1a, #333);
+    color: var(--white);
+}
+
+.franchise-card {
+    text-align: center;
+}
+
+.franchise-card h2 {
+    font-size: 2rem;
+    color: var(--secondary-color);
+    margin-bottom: 10px;
+}
+
+.franchise-features {
+    max-width: 400px;
+    margin: 20px auto;
+    text-align: left;
+}
+
+.franchise-features p {
+    margin-bottom: 10px;
+}
+
+.franchise-limited {
+    font-size: 1.3rem;
+    color: var(--secondary-color);
+    font-weight: bold;
+    margin: 20px 0;
+}
+
+.franchise-team {
+    margin-top: 20px;
+    font-style: italic;
+}
+
+/* MINIS OFFER */
+.minis-offer {
+    padding: 60px 0;
+    background: var(--bg-light);
+}
+
+.minis-offer h2 {
+    text-align: center;
+    color: var(--primary-color);
+    margin-bottom: 40px;
+}
+
+.minis-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.mini-item {
+    background: var(--white);
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: var(--shadow);
+}
+
+.mini-price {
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: var(--primary-color);
+    margin-top: 10px;
+}
+
+/* WEIGHT LOSS TRIO */
+.weight-loss-trio {
+    padding: 60px 0;
+}
+
+.weight-loss-trio h2 {
+    text-align: center;
+    color: var(--primary-color);
+    margin-bottom: 10px;
+}
+
+.weight-loss-trio h3 {
+    text-align: center;
+    color: var(--secondary-color);
+    margin-bottom: 40px;
+}
+
+.trio-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    margin-bottom: 40px;
+}
+
+.trio-item {
+    background: var(--white);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: var(--shadow);
+    text-align: center;
+}
+
+.trio-item h4 {
+    color: var(--primary-color);
+    font-size: 1.3rem;
+    margin-bottom: 15px;
+}
+
+/* HEALTH IMPROVEMENT */
+.health-improvement {
+    padding: 60px 0;
+    background: var(--bg-light);
+}
+
+.health-improvement h2 {
+    text-align: center;
+    color: var(--primary-color);
+    margin-bottom: 30px;
+}
+
+.health-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
+}
+
+.health-item {
+    background: var(--white);
+    padding: 15px;
+    border-radius: 5px;
+    text-align: center;
+    box-shadow: var(--shadow);
+    font-weight: 600;
+    color: var(--primary-color);
+}
+
+/* KNEE PAIN */
+.knee-pain {
+    padding: 60px 0;
+}
+
+.knee-pain h2 {
+    text-align: center;
+    color: var(--primary-color);
+    margin-bottom: 30px;
+}
+
+.knee-products {
+    max-width: 800px;
+    margin: 0 auto;
+    background: var(--white);
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: var(--shadow);
+    text-align: center;
+}
+
+.knee-products h3 {
+    color: var(--primary-color);
+    font-size: 1.8rem;
+    margin: 10px 0;
+}
+
+.knee-availability {
+    color: var(--secondary-color);
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin: 20px 0;
+}
+
+.knee-benefits {
+    text-align: left;
+    margin: 20px 0;
+}
+
+.knee-benefits p {
+    margin-bottom: 10px;
+}
+
+.knee-note {
+    font-style: italic;
+    color: var(--text-light);
+    margin-top: 20px;
+}
+
+/* SKIN REJUVENATION */
+.skin-rejuvenation {
+    padding: 60px 0;
+    background: linear-gradient(135deg, #ff6b6b, #ff8e8e);
+    color: var(--white);
+}
+
+.skin-rejuvenation h2 {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 30px;
+}
+
+.skin-benefits {
+    max-width: 600px;
+    margin: 0 auto 30px;
+}
+
+.skin-benefits p {
+    margin-bottom: 15px;
+    font-size: 1.1rem;
+}
+
+.skin-rejuvenation h3 {
+    text-align: center;
+    font-size: 2rem;
+    color: var(--secondary-color);
+    margin: 20px 0;
+}
+
+.skin-call {
+    text-align: center;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+/* HEALTHY SKIN */
+.healthy-skin {
+    padding: 60px 0;
+    background: var(--bg-light);
+}
+
+.healthy-skin h2 {
+    text-align: center;
+    color: var(--primary-color);
+    margin-bottom: 20px;
+}
+
+.skin-ingredients {
+    text-align: center;
+    font-weight: 600;
+    color: var(--secondary-color);
+    margin-bottom: 30px;
+}
+
+.skin-effects {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.skin-effects p {
+    margin-bottom: 15px;
+    padding: 10px;
+    background: var(--white);
+    border-radius: 5px;
+    box-shadow: var(--shadow);
+}
+
+/* POSTPARTUM */
+.postpartum {
+    padding: 60px 0;
+}
+
+.postpartum h2 {
+    text-align: center;
+    color: var(--primary-color);
+    margin-bottom: 20px;
+}
+
+.postpartum h3 {
+    color: var(--secondary-color);
+    margin: 20px 0 10px;
+}
+
+.postpartum ul {
+    list-style: none;
+    max-width: 600px;
+    margin: 0 auto 20px;
+}
+
+.postpartum li {
+    margin-bottom: 10px;
+    padding-left: 20px;
+    position: relative;
+}
+
+.postpartum li:before {
+    content: "•";
+    color: var(--primary-color);
+    font-weight: bold;
+    position: absolute;
+    left: 0;
+}
+
+.postpartum-source {
+    font-size: 0.8rem;
+    color: var(--text-light);
+    margin-top: 20px;
+    text-align: center;
+}
+
+/* OFF PRODUCT */
+.off-product {
+    padding: 60px 0;
+    background: linear-gradient(135deg, #4834d4, #686de0);
+    color: var(--white);
+}
+
+.off-product h2 {
+    text-align: center;
+    font-size: 3rem;
+    margin-bottom: 30px;
+}
+
+.off-benefits {
+    max-width: 600px;
+    margin: 0 auto 20px;
+}
+
+.off-benefits p {
+    margin-bottom: 15px;
+    font-size: 1.1rem;
+}
+
+.off-flavor {
+    text-align: center;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: var(--secondary-color);
+}
+
+/* CART PAGE */
+.cart-page {
+    padding: 60px 0;
+    min-height: 60vh;
+}
+
+.cart-container {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 30px;
+    margin-top: 30px;
+}
+
+.cart-items {
+    background: var(--white);
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: var(--shadow);
+}
+
+.cart-item {
+    display: grid;
+    grid-template-columns: auto 1fr auto auto;
+    gap: 20px;
+    align-items: center;
+    padding: 15px 0;
+    border-bottom: 1px solid #eee;
+}
+
+.cart-item:last-child {
+    border-bottom: none;
+}
+
+.cart-item-image {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.cart-item-info h4 {
+    color: var(--primary-color);
+    margin-bottom: 5px;
+}
+
+.cart-item-price {
+    font-weight: bold;
+    color: var(--primary-color);
+}
+
+.cart-item-quantity {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.quantity-btn {
+    background: var(--bg-light);
+    border: 1px solid #ddd;
+    width: 30px;
+    height: 30px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.2rem;
+}
+
+.quantity-btn:hover {
+    background: #e0e0e0;
+}
+
+.quantity-value {
+    font-weight: 600;
+    min-width: 30px;
+    text-align: center;
+}
+
+.btn-remove {
+    background: none;
+    border: none;
+    color: #ff4444;
+    cursor: pointer;
+    font-size: 1.2rem;
+}
+
+.cart-summary-panel {
+    background: var(--white);
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: var(--shadow);
+    height: fit-content;
+}
+
+.summary-row {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
+    border-bottom: 1px solid #eee;
+}
+
+.summary-row.total {
+    font-weight: bold;
+    font-size: 1.2rem;
+    border-bottom: none;
+    padding-top: 20px;
+}
+
+.btn-checkout {
+    width: 100%;
+    margin-top: 20px;
+}
+
+.checkout-form {
+    margin-top: 40px;
+    background: var(--white);
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: var(--shadow);
+}
+
+.checkout-form h2 {
+    color: var(--primary-color);
+    margin-bottom: 30px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 600;
+    color: var(--text-color);
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-family: inherit;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: var(--primary-color);
+}
+
+.form-buttons {
+    display: flex;
+    gap: 15px;
+    justify-content: flex-end;
+    margin-top: 30px;
+}
+
+.empty-cart {
+    text-align: center;
+    padding: 60px 0;
+}
+
+.empty-cart i {
+    color: #ddd;
+    margin-bottom: 20px;
+}
+
+.empty-cart h3 {
+    color: var(--text-light);
+    margin-bottom: 10px;
+}
+
+/* FOOTER */
+footer {
+    background: #1a1a1a;
+    color: var(--white);
+    padding: 60px 0 20px;
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    margin-bottom: 30px;
+}
+
+.footer-section h3,
+.footer-section h4 {
+    color: var(--secondary-color);
+    margin-bottom: 15px;
+}
+
+.footer-section ul {
+    list-style: none;
+}
+
+.footer-section ul li {
+    margin-bottom: 10px;
+}
+
+.footer-section a {
+    color: var(--white);
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer-section a:hover {
+    color: var(--secondary-color);
+}
+
+.footer-bottom {
+    text-align: center;
+    padding-top: 20px;
+    border-top: 1px solid #333;
+    color: #888;
+    font-size: 0.9rem;
+}
+
+.footer-disclaimer {
+    margin-top: 10px;
+    font-size: 0.8rem;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    .nav-menu {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: var(--white);
+        flex-direction: column;
+        padding: 20px;
+        box-shadow: var(--shadow);
+    }
+    
+    .nav-menu.active {
+        display: flex;
+    }
+    
+    .menu-toggle {
+        display: block;
+    }
+    
+    .hero-content h1 {
+        font-size: 2rem;
+    }
+    
+    .hero-content h2 {
+        font-size: 1.5rem;
+    }
+    
+    .hero-buttons {
+        flex-direction: column;
+    }
+    
+    .badges {
+        flex-direction: column;
+    }
+    
+    .benefits-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .steps {
+        grid-template-columns: 1fr;
+    }
+    
+    .kit-products {
+        grid-template-columns: 1fr;
+    }
+    
+    .testimonial-card {
+        grid-template-columns: 1fr;
+    }
+    
+    .trio-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .detox-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .footer-content {
+        grid-template-columns: 1fr;
+    }
+    
+    .cart-container {
+        grid-template-columns: 1fr;
+    }
+    
+    .cart-item {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+    
+    .cart-item-image {
+        margin: 0 auto;
+    }
+    
+    .form-buttons {
+        flex-direction: column;
+    }
+}

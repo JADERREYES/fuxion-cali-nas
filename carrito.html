@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrito de Compras - FuXion Cali NAS</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/x-icon" href="img/favicon.ico">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- HEADER -->
+    <header>
+        <div class="container header-container">
+            <div class="logo">
+                <h1>FuXion <span>Cali NAS</span></h1>
+            </div>
+            <nav>
+                <ul class="nav-menu">
+                    <li><a href="index.html#inicio">Inicio</a></li>
+                    <li><a href="index.html#productos">Productos</a></li>
+                    <li><a href="index.html#como-comprar">Cómo Comprar</a></li>
+                    <li><a href="index.html#envios">Envíos</a></li>
+                    <li><a href="index.html#contacto">Contacto</a></li>
+                </ul>
+            </nav>
+            <div class="cart-icon" onclick="window.location.href='carrito.html'">
+                <i class="fas fa-shopping-cart"></i>
+                <span class="cart-count" id="cartCount">0</span>
+            </div>
+            <div class="menu-toggle" id="menuToggle">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </header>
+
+    <!-- CARRITO SECTION -->
+    <section class="cart-page">
+        <div class="container">
+            <h1 class="section-title">Tu Carrito de Compras</h1>
+            
+            <div class="cart-container">
+                <div class="cart-items" id="cartItems">
+                    <!-- Los items del carrito se cargarán dinámicamente -->
+                </div>
+                
+                <div class="cart-summary-panel">
+                    <h3>Resumen del Pedido</h3>
+                    <div class="summary-row">
+                        <span>Subtotal:</span>
+                        <span id="subtotal">$0</span>
+                    </div>
+                    <div class="summary-row">
+                        <span>Envío:</span>
+                        <span>Por calcular</span>
+                    </div>
+                    <div class="summary-row total">
+                        <span>Total:</span>
+                        <span id="total">$0</span>
+                    </div>
+                    
+                    <button class="btn btn-primary btn-checkout" id="checkoutBtn" disabled>Continuar</button>
+                </div>
+            </div>
+
+            <!-- FORMULARIO DE DATOS -->
+            <div class="checkout-form" id="checkoutForm" style="display: none;">
+                <h2>Datos para el envío</h2>
+                <form id="pedidoForm">
+                    <div class="form-group">
+                        <label for="nombre">Nombre completo *</label>
+                        <input type="text" id="nombre" name="nombre" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="telefono">Teléfono *</label>
+                        <input type="tel" id="telefono" name="telefono" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="correo">Correo electrónico *</label>
+                        <input type="email" id="correo" name="correo" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="direccion">Dirección de entrega *</label>
+                        <textarea id="direccion" name="direccion" rows="3" required></textarea>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="ciudad">Ciudad *</label>
+                        <input type="text" id="ciudad" name="ciudad" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="notas">Notas adicionales</label>
+                        <textarea id="notas" name="notas" rows="2"></textarea>
+                    </div>
+                    
+                    <div class="form-buttons">
+                        <button type="button" class="btn btn-secondary" onclick="window.location.href='index.html#productos'">
+                            Seguir Comprando
+                        </button>
+                        <button type="button" class="btn btn-whatsapp" id="enviarWhatsApp">
+                            <i class="fab fa-whatsapp"></i> Enviar Pedido por WhatsApp
+                        </button>
+                    </div>
+                </form>
+            </div>
+            
+            <!-- CARRITO VACÍO -->
+            <div class="empty-cart" id="emptyCart" style="display: none;">
+                <i class="fas fa-shopping-cart fa-4x"></i>
+                <h3>Tu carrito está vacío</h3>
+                <p>Agrega productos para realizar tu pedido</p>
+                <a href="index.html#productos" class="btn btn-primary">Ver Productos</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>FuXion Cali NAS</h3>
+                    <p>Distribuidora autorizada de productos FuXion®</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Enlaces rápidos</h4>
+                    <ul>
+                        <li><a href="index.html#inicio">Inicio</a></li>
+                        <li><a href="index.html#productos">Productos</a></li>
+                        <li><a href="index.html#como-comprar">Cómo Comprar</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contacto</h4>
+                    <p><i class="fab fa-whatsapp"></i> +57 300 1234567</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 FuXion Cali NAS - Todos los derechos reservados</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="carrito.js"></script>
+</body>
+</html>

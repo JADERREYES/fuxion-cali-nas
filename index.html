@@ -1,0 +1,599 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FuXion Cali NAS - Bebidas Funcionales</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/x-icon" href="img/favicon.ico">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- HEADER -->
+    <header>
+        <div class="container header-container">
+            <div class="logo">
+                <h1>FuXion <span>Cali NAS</span></h1>
+            </div>
+            <nav>
+                <ul class="nav-menu">
+                    <li><a href="#inicio">Inicio</a></li>
+                    <li><a href="#productos">Productos</a></li>
+                    <li><a href="#como-comprar">Cómo Comprar</a></li>
+                    <li><a href="#envios">Envíos</a></li>
+                    <li><a href="#contacto">Contacto</a></li>
+                </ul>
+            </nav>
+            <div class="cart-icon" onclick="window.location.href='carrito.html'">
+                <i class="fas fa-shopping-cart"></i>
+                <span class="cart-count" id="cartCount">0</span>
+            </div>
+            <div class="menu-toggle" id="menuToggle">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section id="inicio" class="hero">
+        <div class="container hero-content">
+            <h1>FuXion Cali NAS</h1>
+            <h2>Bebidas funcionales para tu bienestar</h2>
+            <p>Somos una distribuidora de productos FuXion®, bebidas funcionales diseñadas para mejorar tu salud, energía y bienestar de forma natural.</p>
+            <div class="hero-buttons">
+                <a href="#productos" class="btn btn-primary">Ver Productos</a>
+                <a href="https://wa.me/573001234567?text=Hola%2C%20quiero%20informaci%C3%B3n%20sobre%20los%20productos%20FuXion" class="btn btn-whatsapp" target="_blank"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+            </div>
+            <div class="badges">
+                <span class="badge"><i class="fas fa-check-circle"></i> 100% Natural</span>
+                <span class="badge"><i class="fas fa-check-circle"></i> Sin Azúcar</span>
+                <span class="badge"><i class="fas fa-check-circle"></i> Con Stevia</span>
+                <span class="badge"><i class="fas fa-check-circle"></i> Envíos a todo Colombia</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- DESCRIPCIÓN -->
+    <section class="description">
+        <div class="container">
+            <p class="description-text">Nuestros productos están elaborados con ingredientes naturales, vitaminas, minerales, probióticos y extractos herbales que ayudan a mejorar diferentes funciones del organismo. Todos los productos son libres de azúcar y endulzados con Stevia, cumpliendo con la normativa del Ministerio de Salud de Colombia según la Resolución 2492 de 2022.</p>
+            <p class="description-text">Con FuXion puedes mejorar tu digestión, fortalecer tu sistema inmunológico, aumentar tu energía y apoyar procesos como la pérdida de peso o la regeneración celular.</p>
+        </div>
+    </section>
+
+    <!-- BENEFICIOS PRINCIPALES -->
+    <section class="benefits">
+        <div class="container">
+            <div class="benefits-grid">
+                <div class="benefit-card">
+                    <i class="fas fa-bolt"></i>
+                    <h3>Más Energía</h3>
+                    <p>Aumenta tu vitalidad de forma natural</p>
+                </div>
+                <div class="benefit-card">
+                    <i class="fas fa-shield-alt"></i>
+                    <h3>Defensas Altas</h3>
+                    <p>Fortalece tu sistema inmunológico</p>
+                </div>
+                <div class="benefit-card">
+                    <i class="fas fa-weight-scale"></i>
+                    <h3>Control de Peso</h3>
+                    <p>Activa tu metabolismo y quema grasa</p>
+                </div>
+                <div class="benefit-card">
+                    <i class="fas fa-droplet"></i>
+                    <h3>Desintoxica</h3>
+                    <p>Limpia tu organismo naturalmente</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PROMO EXCLUSIVA -->
+    <section class="promo-section">
+        <div class="container">
+            <div class="promo-card">
+                <h2>🚨 PROMO EXCLUSIVA</h2>
+                <h3>¡LLÉVATE UN REGALO SELECCIÓN SALUDABLE GRATIS!</h3>
+                <p>Por la compra de 4 bebidas que sumen 80 puntos</p>
+                <div class="promo-products">
+                    <span>ALPHA BALANCE</span>
+                    <span>NOCARB-T</span>
+                    <span>VITA T+</span>
+                    <span>PRUNEX1</span>
+                    <span>NUTRADAY</span>
+                    <span>REXET</span>
+                </div>
+                <a href="https://wa.me/573001234567?text=Hola%2C%20quiero%20informaci%C3%B3n%20sobre%20la%20PROMO%20EXCLUSIVA%20de%204%20bebidas" class="btn btn-primary" target="_blank">¡Aprovechar Promo!</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- KIT CHUPA PANZA -->
+    <section class="kit-section">
+        <div class="container">
+            <div class="kit-card">
+                <h2>🔥 KIT CHUPA PANZA</h2>
+                <h3>Activa tu metabolismo y reduce grasa visceral</h3>
+                <p class="kit-subtitle">TRANSFORMA TU ABDOMEN EN 30 DÍAS</p>
+                <div class="kit-products">
+                    <div class="kit-product">
+                        <h4>THERMO T3</h4>
+                        <p>✓ Activa el metabolismo</p>
+                        <p>✓ Aumenta energía</p>
+                        <p>✓ Ayuda a la oxidación de grasa</p>
+                    </div>
+                    <div class="kit-product">
+                        <h4>PROBIX</h4>
+                        <p>✓ Mejora salud intestinal</p>
+                        <p>✓ Reduce inflamación</p>
+                        <p>✓ Apoya la disminución de grasa visceral</p>
+                    </div>
+                </div>
+                <div class="kit-benefits">
+                    <p><strong>Beneficios del Kit:</strong> Menos inflamación abdominal, más energía diaria, mejor digestión, apoyo en reducción de grasa acumulada</p>
+                </div>
+                <a href="https://wa.me/573001234567?text=Hola%2C%20quiero%20informaci%C3%B3n%20sobre%20el%20KIT%20CHUPA%20PANZA" class="btn btn-primary" target="_blank">¡Lo Quiero!</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- KIT TRANSFORMA 14 DÍAS -->
+    <section class="kit-transform-section">
+        <div class="container">
+            <div class="kit-transform-card">
+                <h2>⚡ TRANSFORMA TU CUERPO EN 14 DÍAS</h2>
+                <p>Activa tu metabolismo, reduce inflamación y controla antojos naturalmente</p>
+                <div class="kit-transform-products">
+                    <span>PRUNEX1</span>
+                    <span>FLORALY</span>
+                    <span>THERMO T3</span>
+                    <span>NOCARB-T</span>
+                </div>
+                <div class="kit-price">
+                    <span class="old-price">ANTES $198.000</span>
+                    <span class="new-price">HOY $162.500</span>
+                </div>
+                <a href="https://wa.me/573001234567?text=Hola%2C%20QUIERO%20MI%20KIT%20de%2014%20días" class="btn btn-primary" target="_blank">ESCRÍBEME "QUIERO MI KIT"</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCIÓN PRODUCTOS -->
+    <section id="productos" class="products">
+        <div class="container">
+            <h2 class="section-title">Nuestros Productos</h2>
+            <p class="section-subtitle">Bebidas funcionales 100% naturales para tu bienestar</p>
+            
+            <div class="products-grid" id="productsGrid">
+                <!-- Los productos se cargarán dinámicamente con JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- TESTIMONIO -->
+    <section class="testimonial">
+        <div class="container">
+            <div class="testimonial-card">
+                <div class="testimonial-image">
+                    <img src="img/testimonio.jpg" alt="Testimonio HGH" onerror="this.src='https://via.placeholder.com/300x200'">
+                </div>
+                <div class="testimonial-content">
+                    <h3>Testimonio poderoso</h3>
+                    <p>"Cicatrices de ser mamá, que me acomplejaban diariamente tratadas con amor y disciplina con esta bebida poderosa llamada HGH. Después de haber consumido la primer bolsa de HGH, bebida que proporciona una mejor vitalidad de la piel, retarda los síntomas del envejecimiento y mejora la apariencia de la piel."</p>
+                    <p class="testimonial-author">- Cliente FuXion</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCIÓN REEMPLAZA -->
+    <section class="replace-section">
+        <div class="container">
+            <div class="replace-card">
+                <h2>De Esto se trata</h2>
+                <h3>Reemplaza</h3>
+                <div class="replace-comparison">
+                    <div class="replace-before">
+                        <p>Ensure ADVANCE</p>
+                        <p class="replace-arrow">→</p>
+                    </div>
+                    <div class="replace-after">
+                        <p>FIT9 • FUXION</p>
+                    </div>
+                </div>
+                <p class="replace-text">Productos naturales sin azúcar, sin químicos</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- BIENESTAR MASCULINO -->
+    <section class="mens-health">
+        <div class="container">
+            <div class="mens-card">
+                <h2>Bienestar Masculino después de los 40</h2>
+                <h3>Cuida tu Salud Prostática desde Hoy</h3>
+                <div class="mens-benefits">
+                    <span>✓ Antioxidantes</span>
+                    <span>✓ Respuesta inflamatoria saludable</span>
+                    <span>✓ Estilo de vida saludable</span>
+                </div>
+                <div class="mens-products">
+                    <p>GANOMAS • CAPPUCCINO • PASSION • DOUBLE FLOW</p>
+                </div>
+                <p class="mens-quote">Cuida tu cuerpo hoy para disfrutar tu vida mañana</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- SALUD PROSTÁTICA -->
+    <section class="prostate-health">
+        <div class="container">
+            <div class="prostate-grid">
+                <div class="prostate-card">
+                    <h3>BERRY BALANCE</h3>
+                    <ul>
+                        <li>✓ Promueve el buen funcionamiento de la próstata (desinflama)</li>
+                        <li>✓ Desintoxica los riñones</li>
+                        <li>✓ Evita la retención de líquidos</li>
+                        <li>✓ Previene infecciones urinarias y vaginales</li>
+                    </ul>
+                    <p class="product-tag">Sabor Cranberry Piña • 28 sobres • 100% natural</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- VITA XTRA+ -->
+    <section class="vita-xtra">
+        <div class="container">
+            <div class="vita-card">
+                <h2>VITA XTRA+</h2>
+                <h3>ENERGÍA & BIENESTAR NATURAL</h3>
+                <div class="vita-benefits">
+                    <p>✓ Aumenta tu energía y vitalidad durante el día</p>
+                    <p>✓ Mejora rendimiento físico y mental</p>
+                    <p>✓ Mantiene buen ánimo y enfoque</p>
+                    <p>✓ Protege las células con poder antioxidante</p>
+                    <p>✓ Refuerza tu sistema inmunológico</p>
+                </div>
+                <div class="vita-prices">
+                    <p><strong>7 sobres – $38.700</strong></p>
+                    <p><strong>14 sobres – $77.400</strong></p>
+                    <p><strong>28 sobres – $138.100</strong></p>
+                </div>
+                <p class="vita-flavor">Sabor Chicha Morada • Con proteínas de algae, almond, coconuts, stevia</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- BENEFICIOS DETOX -->
+    <section class="detox">
+        <div class="container">
+            <h2>Beneficios del DETOX</h2>
+            <div class="detox-grid">
+                <div class="detox-item">
+                    <h3>1. LIMPIEZA PROFUNDA DEL COLON</h3>
+                    <p>Elimina toxinas y residuos acumulados</p>
+                </div>
+                <div class="detox-item">
+                    <h3>2. MEJORA LA ABSORCIÓN DE NUTRIENTES</h3>
+                    <p>Favorece mejor asimilación de vitaminas</p>
+                </div>
+                <div class="detox-item">
+                    <h3>3. EQUILIBRIO INTESTINAL TOTAL</h3>
+                    <p>Restaura la flora intestinal</p>
+                </div>
+                <div class="detox-item">
+                    <h3>4. DESINTOXICACIÓN Y BIENESTAR GENERAL</h3>
+                    <p>Elimina parásitos y toxinas</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- OFERTA DESTACADA PROBIX -->
+    <section class="probix-featured">
+        <div class="container">
+            <div class="probix-card">
+                <h2>⚠️ ¿La grasa más difícil y peligrosa?</h2>
+                <p>La grasa visceral, la que se acumula alrededor de los órganos y cuesta tanto bajar.</p>
+                <h3>PROBIX trabaja desde adentro</h3>
+                <ul>
+                    <li>✓ Reduce la grasa visceral</li>
+                    <li>✓ Reduce la circunferencia de la cintura</li>
+                    <li>✓ Regula el metabolismo</li>
+                    <li>✓ Mejora la salud intestinal</li>
+                </ul>
+                <p><strong>28 sobres — $138.099</strong></p>
+                <a href="https://wa.me/573001234567?text=Hola%2C%20quiero%20informaci%C3%B3n%20sobre%20PROBIX%20para%20grasa%20visceral" class="btn btn-primary" target="_blank">Atrévete a probarlo</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- CÓMO COMPRAR -->
+    <section id="como-comprar" class="how-to-buy">
+        <div class="container">
+            <h2 class="section-title">Compra fácil en 3 pasos</h2>
+            <div class="steps">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <h3>Elige tus productos</h3>
+                    <p>Explora nuestro catálogo y selecciona los productos que necesitas</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <h3>Agrégalos al carrito</h3>
+                    <p>Haz clic en "Agregar al carrito" y revisa tu pedido</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <h3>Envía por WhatsApp</h3>
+                    <p>Completa tus datos y envía el pedido para confirmar tu compra</p>
+                </div>
+            </div>
+            <div class="cart-summary">
+                <a href="carrito.html" class="btn btn-primary btn-large">Ir al Carrito <i class="fas fa-arrow-right"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ENVÍOS -->
+    <section id="envios" class="shipping">
+        <div class="container">
+            <h2 class="section-title">Envíos a todo Colombia</h2>
+            <div class="shipping-info">
+                <i class="fas fa-truck"></i>
+                <h3>📦 Distribuidora autorizada FuXion</h3>
+                <p>Hacemos envíos a todas las ciudades del país</p>
+                <p>🏠 Entrega directa a domicilio</p>
+                <p class="shipping-note">*Tiempos de entrega: 2-5 días hábiles según la ciudad</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACTO -->
+    <section id="contacto" class="contact">
+        <div class="container">
+            <h2 class="section-title">Contacto</h2>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <p>Si deseas adquirir productos o conocer más sobre la oportunidad de negocio FuXion, contáctanos.</p>
+                    <div class="contact-buttons">
+                        <a href="https://wa.me/573001234567?text=Hola%2C%20quiero%20informaci%C3%B3n%20sobre%20productos%20FuXion" class="btn btn-whatsapp btn-large" target="_blank">
+                            <i class="fab fa-whatsapp"></i> WhatsApp: +57 300 1234567
+                        </a>
+                    </div>
+                    <p class="disclaimer">Publicidad de empresario independiente. Distribuidora FuXion Cali NAS</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FRANQUICIA DIGITAL 2026 -->
+    <section class="franchise">
+        <div class="container">
+            <div class="franchise-card">
+                <h2>FRANQUICIA DIGITAL 2026</h2>
+                <h3>PROYECTO DE DISTRIBUCIÓN GLOBAL</h3>
+                <div class="franchise-features">
+                    <p>✓ Dropshipping</p>
+                    <p>✓ Comisiones del 25% al 50%</p>
+                    <p>✓ Expansión internacional</p>
+                    <p>✓ Sin inventario</p>
+                    <p>✓ Pagos semanales</p>
+                </div>
+                <p class="franchise-limited">CUPOS LIMITADOS</p>
+                <p>Únete hoy y expande tu negocio en 2026</p>
+                <a href="https://wa.me/573001234567?text=Hola%2C%20QUIERO%20INFORMACIÓN%20sobre%20la%20FRANQUICIA%20DIGITAL%202026" class="btn btn-primary" target="_blank">QUIERO INFORMACIÓN</a>
+                <p class="franchise-team">Únete a mi equipo</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- OFERTA MINIS -->
+    <section class="minis-offer">
+        <div class="container">
+            <h2>TUS VERSIONES MINIS FAVORITAS</h2>
+            <div class="minis-grid">
+                <div class="mini-item">
+                    <p>Limpia el colon y desinflama</p>
+                    <p class="mini-price">$38.700</p>
+                </div>
+                <div class="mini-item">
+                    <p>Regula el azúcar en la sangre</p>
+                    <p class="mini-price">$38.700</p>
+                </div>
+                <div class="mini-item">
+                    <p>Quemador de grasa y limpia el hígado graso</p>
+                    <p class="mini-price">$38.700</p>
+                </div>
+                <div class="mini-item">
+                    <p>Mejora la capacidad, estrés y mejora la calidad del sueño</p>
+                    <p class="mini-price">$31.000</p>
+                </div>
+                <div class="mini-item">
+                    <p>Disminuye ansiedad, estrés y mejora la calidad del sueño</p>
+                    <p class="mini-price">$39.100</p>
+                </div>
+                <div class="mini-item">
+                    <p>Apoyo en caso de diarreas, gastritis, úlcera y helicobacter</p>
+                    <p class="mini-price">$46.400</p>
+                </div>
+                <div class="mini-item">
+                    <p>Aumenta tu energía, elimina la fatiga y el cansancio</p>
+                    <p class="mini-price">$38.700</p>
+                </div>
+                <div class="mini-item">
+                    <p>Apoyo en casos de gripa, alergias y asma</p>
+                    <p class="mini-price">$46.400</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- TRÍO PERDER PESO -->
+    <section class="weight-loss-trio">
+        <div class="container">
+            <h2>¿Quieres perder peso, disminuir medidas y aumentar masa muscular?</h2>
+            <h3>Este trío es para ti ❤️</h3>
+            <div class="trio-grid">
+                <div class="trio-item">
+                    <h4>Thermo T3</h4>
+                    <p>Oxida grasa 🥶</p>
+                    <p>Acelera tu metabolismo</p>
+                    <p>Funciona como pre-entreno</p>
+                </div>
+                <div class="trio-item">
+                    <h4>Bioprofít (proteína)</h4>
+                    <p>Disminuye medidas</p>
+                    <p>Aumenta saciedad</p>
+                    <p>Ayuda a construir masa muscular</p>
+                </div>
+                <div class="trio-item">
+                    <h4>Post Sport</h4>
+                    <p>Recuperación muscular</p>
+                    <p>Repara fibras</p>
+                    <p>Favorece un crecimiento más fuerte y rápido</p>
+                </div>
+            </div>
+            <a href="https://wa.me/573001234567?text=Hola%2C%20quiero%20asesoría%20personalizada%20para%20el%20trío%20de%20pérdida%20de%20peso" class="btn btn-primary">Para más asesoría personalizada, escríbeme 👇</a>
+        </div>
+    </section>
+
+    <!-- MEJORA TU SALUD -->
+    <section class="health-improvement">
+        <div class="container">
+            <h2>¿QUÉ QUIERES MEJORAR?</h2>
+            <div class="health-grid">
+                <div class="health-item">1. ENERGÍA</div>
+                <div class="health-item">2. INFLAMACIÓN ABDOMINAL</div>
+                <div class="health-item">3. AZÚCAR EN SANGRE</div>
+                <div class="health-item">4. MALA DIGESTIÓN</div>
+                <div class="health-item">5. BAJAR 5 KILOS</div>
+                <div class="health-item">6. TRIGLICÉRIDOS ALTOS</div>
+                <div class="health-item">7. DOLOR ARTICULAR</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- DOLOR DE RODILLA -->
+    <section class="knee-pain">
+        <div class="container">
+            <h2>¿Dolor de Rodilla?</h2>
+            <div class="knee-products">
+                <div class="knee-product">
+                    <h3>GOLDEN FLX</h3>
+                    <h3>FUxION</h3>
+                </div>
+                <p class="knee-availability">DISPONIBLE - ❤️</p>
+                <div class="knee-benefits">
+                    <p>✓ Potencia el alivio de inflamaciones y dolores</p>
+                    <p>✓ Prevención de problemas articulares, artritis, artrosis ocasionado por edad, sobrepeso y ejercicio</p>
+                    <p>✓ Aporta un efecto antioxidante, antiinflamatorio y analgésico natural</p>
+                    <p>✓ Recomendado para deportistas y personas que deseen mantener una condición física óptima</p>
+                </div>
+                <p class="knee-note">Bebida nutraceutica, sin azúcar, sin químicos, 100% natural</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- REJUVENECE TU PIEL -->
+    <section class="skin-rejuvenation">
+        <div class="container">
+            <h2>REJUVENECE TU PIEL DESDE ADENTRO!</h2>
+            <div class="skin-benefits">
+                <p>✓ PROMUEVE LA ELASTICIDAD Y FIRMEZA DE LA PIEL</p>
+                <p>✓ FORTALECE CABELLO Y UÑAS CON BIOTINA</p>
+                <p>✓ CON COLÁGENO, VITAMINA C Y FRUTAS EXÓTICAS</p>
+                <p>✓ DELICIOSO SABOR FRUTAS EXÓTICAS</p>
+                <p>✓ ENDULZADO CON STEVIA NATURAL</p>
+            </div>
+            <h3>COOL AGE</h3>
+            <p class="skin-call">PRUEBALO HOY! POTENCIA TU BELLEZA NATURAL</p>
+        </div>
+    </section>
+
+    <!-- PIEL SANA -->
+    <section class="healthy-skin">
+        <div class="container">
+            <h2>¡PIEL SANA QUE SE REFLEJA DESDE ADENTRO!</h2>
+            <p class="skin-ingredients">AMINOÁCIDOS + ANTIOXIDANTES + RESVERATROL 98% + GLUTATION + AMALAKI + OPTIBERRY</p>
+            <div class="skin-effects">
+                <p>✅ Nutre la glándula pituitaria y estimula su función de segregar la hormona de la juventud</p>
+                <p>✅ Retarda los efectos del envejecimiento</p>
+                <p>✅ Aumenta la vitalidad, la elasticidad de la piel y mejora la calidad del sueño</p>
+                <p>✅ Mejora la flexibilidad de las arterias y la piel gracias al resveratrol</p>
+                <p>✅ Contribuye a la reducción de radicales libres</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- HORMONAS POSTPARTO -->
+    <section class="postpartum">
+        <div class="container">
+            <h2>¿CÓMO SABER SI TUS HORMONAS ESTÁN ALTERADAS después del parto?</h2>
+            <h3>SEÑALES DE ALERTA (Más allá del cansancio normal)</h3>
+            <ul>
+                <li>Cambios de ánimo intensos: llanto frecuente, irritabilidad, ansiedad</li>
+                <li>Insomnio severo o fatiga extrema constante</li>
+                <li>Alteraciones en el ciclo menstrual</li>
+                <li>Baja concentración, olvidos, "mente en blanco"</li>
+                <li>Pérdida de deseo sexual o sequedad vaginal persistente</li>
+                <li>Cansancio emocional y físico prolongado +6 meses</li>
+            </ul>
+            <h3>INGREDIENTES NATURALES QUE PUEDEN AYUDAR</h3>
+            <p>Orégano y Cedrón • Dong Quai • Triptófano y Magnesio • Calcio y Camu Camu</p>
+            <p class="postpartum-source">Fuentes: ACOG • OMS • Endocrine Society • Sociedad Española de Ginecología</p>
+        </div>
+    </section>
+
+    <!-- OFF (BIENESTAR EMOCIONAL) -->
+    <section class="off-product">
+        <div class="container">
+            <h2>OFF</h2>
+            <div class="off-benefits">
+                <p>Aumenta las endorfinas que se liberan en el cerebro</p>
+                <p>Activa y reduce la respuesta al estrés</p>
+                <p>Estimula el corazón, los pulmones y los músculos</p>
+                <p>Incrementa la resistencia del organismo frente al estrés, la ansiedad y angustia</p>
+                <p>Brinda una mejor nutrición neuronal</p>
+            </div>
+            <p class="off-flavor">SABOR DURAZNO-MANDARINA</p>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>FuXion Cali NAS</h3>
+                    <p>Distribuidora autorizada de productos FuXion®</p>
+                    <p>Bebidas funcionales para tu bienestar</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Enlaces rápidos</h4>
+                    <ul>
+                        <li><a href="#inicio">Inicio</a></li>
+                        <li><a href="#productos">Productos</a></li>
+                        <li><a href="#como-comprar">Cómo Comprar</a></li>
+                        <li><a href="#contacto">Contacto</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contacto</h4>
+                    <p><i class="fab fa-whatsapp"></i> +57 300 1234567</p>
+                    <p><i class="fas fa-envelope"></i> fuxioncalinas@gmail.com</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 FuXion Cali NAS - Todos los derechos reservados</p>
+                <p class="footer-disclaimer">Publicidad de empresario independiente</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
