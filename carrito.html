@@ -47,16 +47,16 @@
                 <div class="cart-summary-panel">
                     <h3>Resumen del Pedido</h3>
                     <div class="summary-row">
-                        <span>Subtotal:</span>
-                        <span id="subtotal">$0</span>
+                        <span>Productos:</span>
+                        <span id="subtotal">0</span>
                     </div>
                     <div class="summary-row">
                         <span>Envío:</span>
                         <span>Por calcular</span>
                     </div>
                     <div class="summary-row total">
-                        <span>Total:</span>
-                        <span id="total">$0</span>
+                        <span>Total productos:</span>
+                        <span id="total">0</span>
                     </div>
                     
                     <button class="btn btn-primary btn-checkout" id="checkoutBtn" disabled>Continuar</button>
@@ -65,37 +65,49 @@
 
             <!-- FORMULARIO DE DATOS -->
             <div class="checkout-form" id="checkoutForm" style="display: none;">
-                <h2>Datos para el envío</h2>
+                <h2>Completa tus datos</h2>
                 <form id="pedidoForm">
-                    <div class="form-group">
-                        <label for="nombre">Nombre completo *</label>
-                        <input type="text" id="nombre" name="nombre" required>
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="telefono">Teléfono *</label>
-                        <input type="tel" id="telefono" name="telefono" required>
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="correo">Correo electrónico *</label>
-                        <input type="email" id="correo" name="correo" required>
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="direccion">Dirección de entrega *</label>
-                        <textarea id="direccion" name="direccion" rows="3" required></textarea>
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="ciudad">Ciudad *</label>
-                        <input type="text" id="ciudad" name="ciudad" required>
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="notas">Notas adicionales</label>
-                        <textarea id="notas" name="notas" rows="2"></textarea>
-                    </div>
+                    <!-- En tu formulario, agrega íconos a los labels -->
+<div class="form-group">
+    <label for="nombre"><i class="fas fa-user"></i> Nombre completo *</label>
+    <input type="text" id="nombre" name="nombre" placeholder="Ej: María Pérez" required>
+</div>
+
+<div class="form-group">
+    <label for="telefono"><i class="fab fa-whatsapp"></i> Teléfono / WhatsApp *</label>
+    <input type="tel" id="telefono" name="telefono" placeholder="Ej: 3154441532" required>
+</div>
+
+<div class="form-group">
+    <label for="correo"><i class="fas fa-envelope"></i> Correo electrónico *</label>
+    <input type="email" id="correo" name="correo" placeholder="Ej: correo@ejemplo.com" required>
+</div>
+
+<div class="form-group">
+    <label for="direccion"><i class="fas fa-map-marker-alt"></i> Dirección de entrega *</label>
+    <textarea id="direccion" name="direccion" rows="2" placeholder="Dirección completa" required></textarea>
+</div>
+
+<div class="form-group">
+    <label for="ciudad"><i class="fas fa-city"></i> Ciudad *</label>
+    <input type="text" id="ciudad" name="ciudad" placeholder="Ciudad" required>
+</div>
+
+<div class="form-group">
+    <label for="metodo-pago"><i class="fas fa-credit-card"></i> Método de pago *</label>
+    <select id="metodo-pago" name="metodo-pago" required>
+        <option value="">Selecciona una opción</option>
+        <option value="Transferencia bancaria">Transferencia bancaria</option>
+        <option value="Nequi">Nequi</option>
+        <option value="Daviplata">Daviplata</option>
+        <option value="Efectivo contraentrega">Efectivo contraentrega</option>
+    </select>
+</div>
+
+<div class="form-group">
+    <label for="notas"><i class="fas fa-pencil-alt"></i> Notas adicionales</label>
+    <textarea id="notas" name="notas" rows="2" placeholder="Ej: Entregar en horario de oficina, puntos de referencia, etc."></textarea>
+</div>
                     
                     <div class="form-buttons">
                         <button type="button" class="btn btn-secondary" onclick="window.location.href='index.html#productos'">
@@ -136,7 +148,7 @@
                 </div>
                 <div class="footer-section">
                     <h4>Contacto</h4>
-                    <p><i class="fab fa-whatsapp"></i> +57 300 1234567</p>
+                    <p><i class="fab fa-whatsapp"></i> +57 315 4441532</p>
                 </div>
             </div>
             <div class="footer-bottom">

@@ -13,12 +13,8 @@ const products = [
             "Ayuda a eliminar residuos acumulados"
         ],
         ingredientes: "Psyllium, Inulina de achicoria, Linaza, Guindón, Kelp, Anís estrella",
-        precios: {
-            "7 sobres": 38700,
-            "28 sobres": 138099
-        },
         sabor: "Ciruela",
-        imagen: "prunex1.jpg"
+        imagen: "prunex1.png"
     },
     {
         id: 2,
@@ -33,12 +29,8 @@ const products = [
             "Ayuda a personas intolerantes a la lactosa"
         ],
         ingredientes: "Cultivos probióticos, Fibra prebiótica, Uchuva, Granadilla",
-        precios: {
-            "7 sobres": 46400,
-            "28 sobres": 165700
-        },
         sabor: "Granadilla",
-        imagen: "flora-liv.jpg"
+        imagen: "floraliv.png"
     },
     {
         id: 3,
@@ -51,11 +43,8 @@ const products = [
             "Mejora la absorción de calcio",
             "Ideal para dietas irregulares"
         ],
-        precios: {
-            "28 sobres": 110400
-        },
         sabor: "Limón",
-        imagen: "liquid-fiber.jpg"
+        imagen: "liquidfiber.png"
     },
     {
         id: 4,
@@ -69,11 +58,8 @@ const products = [
             "Favorece la eliminación de líquidos"
         ],
         ingredientes: "Cranberry, Blueberry, Camu camu, Probióticos",
-        precios: {
-            "28 sobres": 179399
-        },
         sabor: "Frutos rojos",
-        imagen: "berry-balance.jpg"
+        imagen: "baseCulinariaRoja.png"
     },
     {
         id: 5,
@@ -87,11 +73,8 @@ const products = [
             "Aporta energía natural"
         ],
         ingredientes: "Espirulina, Chlorella, Alfalfa, Espinaca, Jengibre, Manzana verde",
-        precios: {
-            "28 sobres": 138099
-        },
         sabor: "Manzana verde",
-        imagen: "green-balance.jpg"
+        imagen: "baseCulinariaVerde.png"
     },
     {
         id: 6,
@@ -105,12 +88,8 @@ const products = [
             "Ayuda en colesterol alto"
         ],
         ingredientes: "Té verde, Té negro, Té rojo, Cromo, Camu camu",
-        precios: {
-            "7 sobres": 38700,
-            "28 sobres": 138099
-        },
         sabor: "Té de limón",
-        imagen: "thermo-t3.jpg"
+        imagen: "thermoT3.png"
     },
     {
         id: 7,
@@ -123,11 +102,8 @@ const products = [
             "Aumenta energía",
             "Favorece recuperación muscular"
         ],
-        precios: {
-            "14 sobres": 130500
-        },
         sabor: "Vainilla francesa",
-        imagen: "bioprotein.jpg"
+        imagen: "biopro+fit.png"
     },
     {
         id: 8,
@@ -140,11 +116,8 @@ const products = [
             "Mejora regeneración celular",
             "Rico en vitaminas y minerales"
         ],
-        precios: {
-            "28 sobres": 138099
-        },
         sabor: "Fresa",
-        imagen: "nutraday.jpg"
+        imagen: "nutraday.png"
     },
     {
         id: 9,
@@ -158,11 +131,202 @@ const products = [
             "Mejora la salud intestinal"
         ],
         ingredientes: "10 mil millones de probióticos por sobre",
-        precios: {
-            "28 sobres": 138099
-        },
-        imagen: "probix.jpg",
+        imagen: "probix.png",
         destacado: true
+    },
+    {
+        id: 10,
+        nombre: "ALPHABALANCE",
+        tagline: "Nutrición inteligente para toda la familia",
+        descripcion: "Suplemento vitamínico completo con vitaminas y minerales esenciales.",
+        beneficios: [
+            "Fortalece el sistema inmunológico",
+            "Mejora la energía vital",
+            "Apoya el desarrollo cognitivo",
+            "Complemento nutricional diario"
+        ],
+        ingredientes: "Complejo de vitaminas A, B, C, D, E, minerales esenciales",
+        sabor: "Frutas",
+        imagen: "alphabalance.png"
+    },
+    {
+        id: 11,
+        nombre: "BIOPRO SPORT",
+        tagline: "Rendimiento deportivo superior",
+        descripcion: "Fórmula especializada para deportistas que buscan máximo rendimiento.",
+        beneficios: [
+            "Aumenta la resistencia física",
+            "Acelera recuperación muscular",
+            "Previene calambres",
+            "Hidratación inteligente"
+        ],
+        ingredientes: "Electrolitos, Vitaminas del grupo B, Magnesio, Potasio",
+        sabor: "Naranja",
+        imagen: "biopro+sport.png"
+    },
+    {
+        id: 12,
+        nombre: "BIOPRO TECT",
+        tagline: "Protección inmunológica avanzada",
+        descripcion: "Refuerza tus defensas de manera natural con antioxidantes y vitaminas.",
+        beneficios: [
+            "Fortalece el sistema inmune",
+            "Protege contra radicales libres",
+            "Previene enfermedades estacionales",
+            "Acelera recuperación"
+        ],
+        ingredientes: "Vitamina C, Zinc, Echinacea, Propóleo",
+        sabor: "Naranja",
+        imagen: "biopro+tect.png"
+    },
+    {
+        id: 13,
+        nombre: "CAFE Y CAFE FIT",
+        tagline: "Energía natural para quemar grasa",
+        descripcion: "Café funcional que acelera el metabolismo mientras disfrutas su sabor.",
+        beneficios: [
+            "Acelera el metabolismo",
+            "Quema grasa",
+            "Aumenta energía",
+            "Mejora concentración"
+        ],
+        ingredientes: "Café verde, Café arábica, Té verde, Cromo",
+        sabor: "Café",
+        imagen: "cafeycafefit.png"
+    },
+    {
+        id: 14,
+        nombre: "COOL AGE",
+        tagline: "Juventud y vitalidad prolongada",
+        descripcion: "Fórmula antioxidante que combate el envejecimiento celular.",
+        beneficios: [
+            "Reduce signos de envejecimiento",
+            "Protege la piel",
+            "Aumenta vitalidad",
+            "Antioxidante celular"
+        ],
+        ingredientes: "Resveratrol, Coenzima Q10, Vitaminas antioxidantes",
+        sabor: "Uva",
+        imagen: "cool-age.png"
+    },
+    {
+        id: 15,
+        nombre: "ON",
+        tagline: "Equilibrio hormonal femenino",
+        descripcion: "Suplemento natural para el bienestar de la mujer.",
+        beneficios: [
+            "Equilibra hormonas",
+            "Alivia síntomas menstruales",
+            "Mejora el estado de ánimo",
+            "Apoya salud reproductiva"
+        ],
+        ingredientes: "Vitex, Dong Quai, Vitaminas del complejo B",
+        sabor: "Frutos del bosque",
+        imagen: "on.png"
+    },
+    {
+        id: 16,
+        nombre: "PACK 5-14",
+        tagline: "Programa completo de bienestar",
+        descripcion: "Combinación estratégica de productos para resultados óptimos.",
+        beneficios: [
+            "Desintoxicación completa",
+            "Pérdida de peso efectiva",
+            "Energía sostenida",
+            "Salud integral"
+        ],
+        ingredientes: "Selección especial de productos sinérgicos",
+        imagen: "pack5-14.png"
+    },
+    {
+        id: 17,
+        nombre: "PASSION",
+        tagline: "Energía y vitalidad natural",
+        descripcion: "Fórmula energizante con ingredientes naturales.",
+        beneficios: [
+            "Aumenta energía natural",
+            "Mejora el rendimiento",
+            "Reduce la fatiga",
+            "Vitalidad duradera"
+        ],
+        ingredientes: "Macela, Guaraná, Ginseng, Vitaminas",
+        sabor: "Maracuyá",
+        imagen: "passion.png"
+    },
+    {
+        id: 18,
+        nombre: "PRE SPORT",
+        tagline: "Pre-entreno avanzado",
+        descripcion: "Preparación completa para tu rutina de ejercicios.",
+        beneficios: [
+            "Mayor resistencia",
+            "Enfoque mental",
+            "Retrasa la fatiga",
+            "Rendimiento superior"
+        ],
+        ingredientes: "Beta-alanina, Citrulina, Cafeína natural, Vitaminas",
+        sabor: "Limón",
+        imagen: "presport.png"
+    },
+    {
+        id: 19,
+        nombre: "PROBAL",
+        tagline: "Balance intestinal completo",
+        descripcion: "Probióticos y prebióticos para una digestión saludable.",
+        beneficios: [
+            "Mejora la digestión",
+            "Fortalece defensas",
+            "Reduce inflamación",
+            "Salud intestinal"
+        ],
+        ingredientes: "Lactobacillus, Bifidobacterium, Fibra prebiótica",
+        sabor: "Natural",
+        imagen: "probal.png"
+    },
+    {
+        id: 20,
+        nombre: "VERA +",
+        tagline: "Salud digestiva natural",
+        descripcion: "Aloe vera concentrado con propiedades curativas.",
+        beneficios: [
+            "Cicatriza el tracto digestivo",
+            "Antiinflamatorio natural",
+            "Hidrata y nutre",
+            "Mejora la digestión"
+        ],
+        ingredientes: "Aloe vera puro, Vitamina C, Miel",
+        sabor: "Aloe",
+        imagen: "vera+.png"
+    },
+    {
+        id: 21,
+        nombre: "VITA ENERGIA",
+        tagline: "Energía para todo el día",
+        descripcion: "Complejo vitamínico que proporciona energía sostenida.",
+        beneficios: [
+            "Energía duradera",
+            "Mejora el ánimo",
+            "Reduce el estrés",
+            "Vitalidad completa"
+        ],
+        ingredientes: "Complejo B, Magnesio, Ginseng, Guaraná",
+        sabor: "Naranja",
+        imagen: "vitaenergia.png"
+    },
+    {
+        id: 22,
+        nombre: "VITAXTRAT +",
+        tagline: "Nutrición celular avanzada",
+        descripcion: "Fórmula concentrada de vitaminas y minerales esenciales.",
+        beneficios: [
+            "Nutrición celular profunda",
+            "Antioxidante potente",
+            "Regeneración celular",
+            "Salud integral"
+        ],
+        ingredientes: "Vitaminas A, C, E, Selenio, Zinc, Coenzima Q10",
+        sabor: "Frutas cítricas",
+        imagen: "vitaxtrat+.png"
     }
 ];
 
@@ -191,7 +355,7 @@ document.addEventListener('DOMContentLoaded', function() {
     updateCartCount();
 });
 
-// Crear tarjeta de producto
+// Crear tarjeta de producto (SIN PRECIOS)
 function createProductCard(product) {
     const card = document.createElement('div');
     card.className = 'product-card';
@@ -205,34 +369,17 @@ function createProductCard(product) {
         beneficiosHTML += '</ul>';
     }
     
-    let preciosHTML = '<div class="product-prices">';
-    for (const [presentacion, precio] of Object.entries(product.precios)) {
-        preciosHTML += `
-            <div class="price-item">
-                <span>${presentacion}:</span>
-                <strong>$${precio.toLocaleString('es-CO')}</strong>
-            </div>
-        `;
-    }
-    preciosHTML += '</div>';
-    
-    // Tomar el precio más bajo para mostrar
-    const preciosArray = Object.values(product.precios);
-    const precioMinimo = Math.min(...preciosArray);
-    
     card.innerHTML = `
         <div class="product-image">
-            <img src="img/${product.imagen}" alt="${product.nombre}" onerror="this.src='https://via.placeholder.com/300x200?text=${product.nombre}'">
+            <img src="img/${product.imagen}" alt="${product.nombre}" onerror="this.src='https://via.placeholder.com/300x200?text=${product.nombre.replace(/ /g, '+')}'">
         </div>
         <div class="product-info">
             <h3>${product.nombre}</h3>
             <p class="product-tagline">${product.tagline}</p>
             <p class="product-description">${product.descripcion}</p>
             ${beneficiosHTML}
-            ${preciosHTML}
             <div class="product-footer">
-                <span class="product-price">Desde $${precioMinimo.toLocaleString('es-CO')}</span>
-                <button class="btn-add" onclick='addToCart(${JSON.stringify(product)})'>
+                <button class="btn-add" onclick='addToCart(${JSON.stringify(product).replace(/'/g, "\\'")})'>
                     Agregar <i class="fas fa-cart-plus"></i>
                 </button>
             </div>
@@ -255,7 +402,6 @@ function addToCart(product) {
         cart.push({
             id: product.id,
             nombre: product.nombre,
-            precio: Math.min(...Object.values(product.precios)),
             imagen: product.imagen,
             cantidad: 1
         });
@@ -286,7 +432,7 @@ function showNotification(message) {
         position: fixed;
         top: 20px;
         right: 20px;
-        background: var(--primary-color);
+        background: #4CAF50;
         color: white;
         padding: 15px 25px;
         border-radius: 5px;

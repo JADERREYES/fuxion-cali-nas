@@ -16,12 +16,15 @@ document.addEventListener('DOMContentLoaded', function() {
     const checkoutBtn = document.getElementById('checkoutBtn');
     if (checkoutBtn) {
         checkoutBtn.addEventListener('click', function() {
-            document.getElementById('checkoutForm').style.display = 'block';
-            this.disabled = true;
-            window.scrollTo({
-                top: document.getElementById('checkoutForm').offsetTop - 100,
-                behavior: 'smooth'
-            });
+            const checkoutForm = document.getElementById('checkoutForm');
+            if (checkoutForm) {
+                checkoutForm.style.display = 'block';
+                this.style.display = 'none';
+                window.scrollTo({
+                    top: checkoutForm.offsetTop - 100,
+                    behavior: 'smooth'
+                });
+            }
         });
     }
     
@@ -44,7 +47,7 @@ function loadCart() {
         // Mostrar carrito vacío
         if (emptyCart) emptyCart.style.display = 'block';
         if (cartItems) cartItems.style.display = 'none';
-        if (checkoutBtn) checkoutBtn.disabled = true;
+        if (checkoutBtn) checkoutBtn.style.display = 'none';
         if (cartSummary) cartSummary.style.opacity = '0.5';
         
         // Ocultar formulario si está visible
@@ -57,19 +60,13 @@ function loadCart() {
             cartItems.style.display = 'block';
             cartItems.innerHTML = '';
             
-            let subtotal = 0;
-            
             cart.forEach((item, index) => {
-                const itemTotal = item.precio * item.cantidad;
-                subtotal += itemTotal;
-                
                 const itemElement = document.createElement('div');
                 itemElement.className = 'cart-item';
                 itemElement.innerHTML = `
-                    <img src="img/${item.imagen}" alt="${item.nombre}" class="cart-item-image" onerror="this.src='https://via.placeholder.com/80x80?text=${item.nombre}'">
+                    <img src="img/${item.imagen}" alt="${item.nombre}" class="cart-item-image" onerror="this.src='https://via.placeholder.com/80x80?text=${item.nombre.replace(/ /g, '+')}'">
                     <div class="cart-item-info">
                         <h4>${item.nombre}</h4>
-                        <p class="cart-item-price">$${item.precio.toLocaleString('es-CO')}</p>
                     </div>
                     <div class="cart-item-quantity">
                         <button class="quantity-btn" onclick="updateQuantity(${index}, -1)">-</button>
@@ -84,12 +81,20 @@ function loadCart() {
                 cartItems.appendChild(itemElement);
             });
             
-            // Actualizar totales
-            document.getElementById('subtotal').textContent = `$${subtotal.toLocaleString('es-CO')}`;
-            document.getElementById('total').textContent = `$${subtotal.toLocaleString('es-CO')}`;
+            // Actualizar contador de items
+            const totalItems = cart.reduce((sum, item) => sum + item.cantidad, 0);
             
-            // Habilitar botón de checkout
-            if (checkoutBtn) checkoutBtn.disabled = false;
+            const subtotalSpan = document.getElementById('subtotal');
+            const totalSpan = document.getElementById('total');
+            
+            if (subtotalSpan) subtotalSpan.textContent = `${totalItems} producto(s)`;
+            if (totalSpan) totalSpan.textContent = `${totalItems} producto(s)`;
+            
+            // Mostrar botón de checkout
+            if (checkoutBtn) {
+                checkoutBtn.style.display = 'block';
+                checkoutBtn.disabled = false;
+            }
             if (cartSummary) cartSummary.style.opacity = '1';
         }
     }
@@ -135,61 +140,120 @@ function updateCartCount() {
     
     const cartCounts = document.querySelectorAll('.cart-count');
     cartCounts.forEach(el => {
-        el.textContent = totalItems;
+        if (el) el.textContent = totalItems;
     });
 }
 
 // Enviar pedido por WhatsApp
 function enviarPedidoWhatsApp() {
-    // Validar formulario
-    const nombre = document.getElementById('nombre').value;
-    const telefono = document.getElementById('telefono').value;
-    const correo = document.getElementById('correo').value;
-    const direccion = document.getElementById('direccion').value;
-    const ciudad = document.getElementById('ciudad').value;
-    const notas = document.getElementById('notas').value;
+    // Obtener valores del formulario
+    const nombre = document.getElementById('nombre')?.value.trim();
+    const telefono = document.getElementById('telefono')?.value.trim();
+    const correo = document.getElementById('correo')?.value.trim();
+    const direccion = document.getElementById('direccion')?.value.trim();
+    const ciudad = document.getElementById('ciudad')?.value.trim();
+    const metodoPago = document.getElementById('metodo-pago')?.value;
+    const notas = document.getElementById('notas')?.value.trim();
     
-    if (!nombre || !telefono || !correo || !direccion || !ciudad) {
-        alert('Por favor completa todos los campos obligatorios');
+    // Validar campos obligatorios
+    if (!nombre) {
+        alert('Por favor ingresa tu nombre completo');
+        document.getElementById('nombre')?.focus();
+        return;
+    }
+    
+    if (!telefono) {
+        alert('Por favor ingresa tu número de teléfono');
+        document.getElementById('telefono')?.focus();
+        return;
+    }
+    
+    if (!correo) {
+        alert('Por favor ingresa tu correo electrónico');
+        document.getElementById('correo')?.focus();
+        return;
+    }
+    
+    // Validar formato de email
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(correo)) {
+        alert('Por favor ingresa un correo electrónico válido');
+        document.getElementById('correo')?.focus();
+        return;
+    }
+    
+    if (!direccion) {
+        alert('Por favor ingresa tu dirección de entrega');
+        document.getElementById('direccion')?.focus();
+        return;
+    }
+    
+    if (!ciudad) {
+        alert('Por favor ingresa tu ciudad');
+        document.getElementById('ciudad')?.focus();
+        return;
+    }
+    
+    if (!metodoPago) {
+        alert('Por favor selecciona un método de pago');
+        document.getElementById('metodo-pago')?.focus();
         return;
     }
     
     // Obtener carrito
     const cart = JSON.parse(localStorage.getItem('cart')) || [];
     
+    if (cart.length === 0) {
+        alert('Tu carrito está vacío');
+        return;
+    }
+    
     // Construir mensaje
-    let mensaje = `*Pedido FuXion Cali NAS*%0A%0A`;
-    mensaje += `*Datos del cliente:*%0A`;
+    let mensaje = `*🛍️ NUEVO PEDIDO - FuXion Cali NAS*%0A%0A`;
+    
+    mensaje += `*👤 DATOS DEL CLIENTE*%0A`;
     mensaje += `Nombre: ${nombre}%0A`;
     mensaje += `Teléfono: ${telefono}%0A`;
     mensaje += `Correo: ${correo}%0A`;
     mensaje += `Dirección: ${direccion}%0A`;
     mensaje += `Ciudad: ${ciudad}%0A`;
+    mensaje += `Método de pago: ${metodoPago}%0A`;
     if (notas) mensaje += `Notas: ${notas}%0A`;
     
-    mensaje += `%0A*Productos:*%0A`;
+    mensaje += `%0A*📦 PRODUCTOS SOLICITADOS*%0A`;
     
-    let total = 0;
-    cart.forEach(item => {
-        const subtotal = item.precio * item.cantidad;
-        total += subtotal;
-        mensaje += `• ${item.nombre} x${item.cantidad} - $${subtotal.toLocaleString('es-CO')}%0A`;
+    let totalItems = 0;
+    cart.forEach((item, index) => {
+        totalItems += item.cantidad;
+        mensaje += `${index + 1}. ${item.nombre} - Cantidad: ${item.cantidad}%0A`;
     });
     
-    mensaje += `%0A*Total: $${total.toLocaleString('es-CO')}*%0A`;
-    mensaje += `%0A¡Gracias por tu compra!%0A`;
+    mensaje += `%0A*📊 RESUMEN*%0A`;
+    mensaje += `Total productos: ${totalItems} unidades%0A%0A`;
+    
+    mensaje += `*✅ ¡Gracias por tu compra!*%0A`;
     mensaje += `Te contactaremos pronto para coordinar la entrega.`;
     
-    // Número de WhatsApp (cambiar por el número real)
-    const numeroWhatsApp = '573001234567';
+    // Número de WhatsApp (cámbialo por tu número real)
+    const numeroWhatsApp = '573154441532'; // Ej: 573154441532
     
     // Abrir WhatsApp
-    window.open(`https://wa.me/${numeroWhatsApp}?text=${mensaje}`, '_blank');
+    const whatsappUrl = `https://wa.me/${numeroWhatsApp}?text=${mensaje}`;
+    window.open(whatsappUrl, '_blank');
     
-    // Opcional: limpiar carrito después de enviar
+    // Opción para vaciar carrito
     if (confirm('¿Deseas vaciar el carrito después de enviar el pedido?')) {
         localStorage.removeItem('cart');
         loadCart();
+        
+        // Ocultar formulario
+        const checkoutForm = document.getElementById('checkoutForm');
+        const checkoutBtn = document.getElementById('checkoutBtn');
+        
+        if (checkoutForm) checkoutForm.style.display = 'none';
+        if (checkoutBtn) checkoutBtn.style.display = 'block';
+        
+        showNotification('Carrito vaciado correctamente');
     }
 }
 
@@ -200,13 +264,14 @@ function showNotification(message) {
         position: fixed;
         top: 20px;
         right: 20px;
-        background: var(--primary-color);
+        background: linear-gradient(135deg, #ff6b9d, #9d7bff);
         color: white;
         padding: 15px 25px;
-        border-radius: 5px;
-        box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+        border-radius: 10px;
+        box-shadow: 0 4px 15px rgba(255, 107, 157, 0.3);
         z-index: 9999;
         animation: slideIn 0.3s ease;
+        font-weight: 500;
     `;
     notification.textContent = message;
     
